@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "azeretmono";
+  src: url("../src/assets/fonts/azeretmono.ttf") format("truetype");
+  font-display: swap;
+}
+
+a,
+button {
+  cursor: none; /* Asegurar que el cursor predeterminado no aparezca */
+}
+
+:root,
+body {
+  font-family: "azeretmono", Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 0;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main-- {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.main- {
+  position: relative;
+  z-index: 1;
+}
