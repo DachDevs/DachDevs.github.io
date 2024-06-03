@@ -1,3 +1,14 @@
+@font-face {
+  font-family: "onest";
+  src: url("../src/assets/fonts/Onest.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root,
+body {
+  font-family: "onest", Inter, system-ui, Avenir;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
