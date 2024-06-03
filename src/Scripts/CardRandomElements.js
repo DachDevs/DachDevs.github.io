@@ -1,0 +1,100 @@
+export default [
+  {
+    company: "Tech Innovators",
+    position: "Senior Software Developer",
+    duration: "May 2022 — Present",
+    location: "New York, USA",
+    description:
+      "Leading a team of developers in creating cutting-edge software solutions for various clients. Responsible for overseeing project lifecycles, implementing new technologies, and ensuring the timely delivery of projects.",
+    skills: [
+      "JavaScript",
+      "Python",
+      "Django",
+      "React",
+      "Node.js",
+      "MongoDB",
+      "AWS",
+      "Docker",
+    ],
+  },
+  {
+    company: "Code Crafters",
+    position: "Full Stack Engineer",
+    duration: "Jan 2021 — Apr 2022",
+    location: "Berlin, Germany",
+    description:
+      "Developed and maintained web applications using a variety of technologies. Collaborated closely with designers and product managers to deliver user-friendly and efficient solutions.",
+    skills: [
+      "JavaScript",
+      "Ruby on Rails",
+      "Vue.js",
+      "PostgreSQL",
+      "Heroku",
+      "Git",
+      "Linux",
+    ],
+  },
+  {
+    company: "Innovative Solutions",
+    position: "Backend Developer",
+    duration: "Mar 2019 — Dec 2020",
+    location: "Tokyo, Japan",
+    description:
+      "Specialized in server-side logic and database management. Ensured high performance and responsiveness to requests from the front-end.",
+    skills: ["Python", "Flask", "SQL", "Docker", "Kubernetes", "AWS", "CI/CD"],
+  },
+  {
+    company: "Digital Pioneers",
+    position: "Lead Frontend Developer",
+    duration: "Feb 2020 — Apr 2023",
+    location: "San Francisco, USA",
+    description:
+      "Spearheaded the development of user interfaces for various high-profile projects. Worked closely with UX/UI designers to ensure optimal user experiences and implemented best practices for responsive design.",
+    skills: [
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Redux",
+      "CSS",
+      "HTML",
+      "Webpack",
+      "Jest",
+    ],
+  },
+  {
+    company: "NextGen Tech",
+    position: "Cloud Solutions Architect",
+    duration: "Sep 2018 — Jan 2020",
+    location: "Toronto, Canada",
+    description:
+      "Designed and implemented scalable cloud architectures for a variety of clients. Provided technical guidance and support for cloud migration projects, ensuring security and efficiency.",
+    skills: [
+      "AWS",
+      "Azure",
+      "Google Cloud",
+      "Terraform",
+      "Kubernetes",
+      "Docker",
+      "Python",
+      "Bash",
+    ],
+  },
+  {
+    company: "AI Innovators",
+    position: "Machine Learning Engineer",
+    duration: "Jul 2017 — Aug 2018",
+    location: "Sydney, Australia",
+    description:
+      "Developed and deployed machine learning models for predictive analytics and automation. Collaborated with data scientists and analysts to refine algorithms and improve model accuracy.",
+    skills: [
+      "Python",
+      "TensorFlow",
+      "Keras",
+      "Scikit-learn",
+      "Pandas",
+      "NumPy",
+      "SQL",
+      "Linux",
+    ],
+  },
+];
