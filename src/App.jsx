@@ -7,6 +7,8 @@ import * as drei from '@react-three/drei'
 import * as fiber from '@react-three/fiber'
 import CustomCursor from './Scripts/CustomCursor'
 import Card from './components/Card'
+import Main from './components/Main'
+import Presentations from './components/Presentations'
 
 function App() {
 
@@ -32,8 +34,10 @@ function App() {
       <div className='main-'>
         <Navbar />
         <div>
+          <Main />
+          <Presentations />
           <Card />
-          <CircleFollower />
+          {/* <CircleFollower /> */}
           <CustomCursor />
         </div>
       </div>
