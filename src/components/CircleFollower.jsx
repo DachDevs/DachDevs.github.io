@@ -1,14 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 function CircleFollower() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const circleRef = useRef(null);
 
   useEffect(() => {
     const handleMouseMove = (event) => {
-      setPosition({
-        x: event.clientX,
-        y: event.clientY,
-      });
+      const { pageX, pageY } = event;
+      setPosition({ x: pageX, y: pageY });
     };
 
     window.addEventListener('mousemove', handleMouseMove);
@@ -18,19 +17,32 @@ function CircleFollower() {
     };
   }, []);
 
-  const circleStyle = {
-    position: 'absolute',
-    left: `${position.x - 17}px`, // Ajuste del tamaño y la posición del borde
-    top: `${position.y - 17}px`,
-    width: '30px', // Tamaño del círculo
-    height: '30px',
-    border: '2px solid #b0b9d2ff', // Borde blanco
-    borderRadius: '50%',
-    pointerEvents: 'none',
-    transition: 'width 0.3s, height 0.3s, border 0.3s', // Transición suave
-  };
+  useEffect(() => {
+    const updatePosition = () => {
+      if (circleRef.current) {
+        circleRef.current.style.left = `${position.x - 17}px`;
+        circleRef.current.style.top = `${position.y - 17}px`;
+      }
+    };
 
-  return <div style={circleStyle} className="circle-follower" />;
+    requestAnimationFrame(updatePosition);
+  }, [position]);
+
+  return (
+    <div
+      ref={circleRef}
+      style={{
+        position: 'absolute',
+        width: '30px', // Tamaño del círculo
+        height: '30px',
+        border: '2px solid #b0b9d2ff', // Borde blanco
+        borderRadius: '50%',
+        pointerEvents: 'none',
+        transition: 'width 0.3s, height 0.3s, border 0.3s', // Transición suave
+      }}
+      className="circle-follower"
+    />
+  );
 }
 
 export default CircleFollower;

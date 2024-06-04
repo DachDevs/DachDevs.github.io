@@ -9,6 +9,7 @@
   justify-content: center;
   background: rgba(0, 0, 0, 0.136);
   backdrop-filter: blur(10px);
+  z-index: 1000;
 }
 
 .Navbar > * {
