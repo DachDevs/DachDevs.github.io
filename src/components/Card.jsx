@@ -12,10 +12,10 @@ const Card = () => {
   }, []);
 
   return (
-    <div className='card-container'>
+    <div className='card-container fade-up'>
       {
         CardRandomElements.map((element, index) => (
-          <div className='card fade-up' key={index}>
+          <div className='card' key={index}>
             <div className='card-content'>
               <div>
               </div>
