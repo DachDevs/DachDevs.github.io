@@ -4,6 +4,12 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "ocr";
+  src: url("../src/assets/fonts/ocraextended.ttf") format("truetype");
+  font-display: swap;
+}
+
 :root,
 body {
   font-family: "onest", Inter, system-ui, Avenir;

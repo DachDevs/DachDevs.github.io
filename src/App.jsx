@@ -9,6 +9,8 @@ import CustomCursor from './Scripts/CustomCursor'
 import Card from './components/Card'
 import Main from './components/Main'
 import Presentations from './components/Presentations'
+import SectionTitle from './components/SectionTitle'
+import Projects from './components/Projects'
 
 function App() {
 
@@ -35,8 +37,12 @@ function App() {
         <Navbar />
         <div>
           <Main />
+          <SectionTitle title='Devs GITHUB Profiles' />
           <Presentations />
+          <SectionTitle title='Experience' />
           <Card />
+          <SectionTitle title='Some GITHUB Projects' />
+          <Projects />
           {/* <CircleFollower /> */}
           <CustomCursor />
         </div>
