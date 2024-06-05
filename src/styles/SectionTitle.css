@@ -1,0 +1,28 @@
+.section-title {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--dark-color);
+  font-family: ocr;
+}
+
+.section-title > hr {
+  position: absolute;
+  width: 70%;
+  top: 35%;
+  left: 15%;
+  z-index: -1; /* Coloca el hr detrás del título */
+  opacity: 0; /* Empieza invisible */
+  transition: opacity 1s ease-in-out; /* Efecto de desvanecimiento */
+}
+
+.section-title > h1 {
+  position: relative;
+  z-index: 1; /* Asegura que el título esté por delante del hr */
+}
+
+.section-title.fade-in > hr {
+  opacity: 1; /* Hace visible el hr */
+}
