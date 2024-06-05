@@ -1,17 +1,36 @@
+/* eslint-disable no-unused-vars */
+import { useEffect, useState } from 'react'
 import '../styles/Projects.css'
 
 const Projects = () => {
+
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    getGithubProjects();
+  }, [])
+
+  const getGithubProjects = () => {
+    fetch(`https://api.github.com/users/hennyfeliz/repos`)
+      .then(response => response.json())
+      .then(projects => {
+        setProjects(projects);
+      })
+      .catch(error => console.error('Error al obtener los datos del perfil:', error));
+  }
+
   return (
     <div className='projects'>
-      <div className='project'>
-        <div className='project-content'>Content 1</div>
-      </div>
-      <div className='project'>
-        <div className='project-content'>Content 2</div>
-      </div>
-      <div className='project'>
-        <div className='project-content'>Content 3</div>
-      </div>
+      {
+        projects.map((project, index) => (
+          <div className='project' key={index}>
+            <div className='project-content'>
+              <span>{project.name}</span>
+              {/* <span>{project.description}</span> */}
+            </div>
+          </div>
+        ))
+      }
     </div>
   )
 }
