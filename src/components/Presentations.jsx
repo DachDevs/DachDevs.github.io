@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react'
 import '../styles/Presentations.css'
 
-const Presentations = () => {
+const Presentations = ({ setImages }) => {
 
   const [data, setData] = useState([]);
 
@@ -24,6 +25,7 @@ const Presentations = () => {
     ))
       .then(users => {
         setData(users);
+        setImages(users.map(user => user.avatar_url));
       })
       .catch(error => console.error('Error al obtener los datos del perfil:', error));
   };
@@ -33,7 +35,6 @@ const Presentations = () => {
       {data.map((user, index) => (
         <div key={index}>
           <div>
-
           </div>
           <img src={user.avatar_url} alt="Avatar" />
           <div className='presentation-content'>
