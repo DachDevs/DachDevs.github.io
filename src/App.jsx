@@ -11,8 +11,11 @@ import Main from './components/Main'
 import Presentations from './components/Presentations'
 import SectionTitle from './components/SectionTitle'
 import Projects from './components/Projects'
+import { useState } from 'react'
 
 function App() {
+
+  const [images, setImages] = useState([])
 
   return (
     <>
@@ -38,12 +41,15 @@ function App() {
         <div>
           <Main />
           <SectionTitle title='Devs GITHUB Profiles' />
-          <Presentations />
+          <Presentations setImages={setImages} />
           <SectionTitle title='Experience' />
           <Card />
           <SectionTitle title='Some GITHUB Projects' />
-          <Projects />
+          <Projects images={images} />
           {/* <CircleFollower /> */}
+          <footer>
+            <p>&copy; 2024 Dach Devs. Todos los derechos reservados.</p>
+          </footer>
           <CustomCursor />
         </div>
       </div>
