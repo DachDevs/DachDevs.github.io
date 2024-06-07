@@ -1,34 +1,237 @@
 .projects {
-  border-radius: 12px;
-  border: 4px solid rgba(255, 255, 255, 0.192);
-  width: 70%;
-  height: 300px;
-  overflow-y: auto;
-  margin: 0 auto;
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  width: 80%;
+  margin: 0 auto;
+  height: 500px;
+}
+
+.projects > hr {
+  border: 2px solid rgba(255, 255, 255, 0.115);
+}
+
+.projects > div {
+  display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-top: 2rem;
-  box-sizing: border-box;
-  padding-top: 400px;
+  width: 33.3%;
 }
 
-.project {
-  width: 90%;
-  height: 100px;
-  margin: 20px 0;
-}
-
-.project-content {
-  height: 100px;
-  border-radius: 12px;
-  border: 4px solid rgba(255, 255, 255, 0.192);
+.projects > div > div {
   padding: 10px 20px;
+  width: 80%;
+  height: 30%;
+  margin: 10px auto;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.073);
+  background: rgba(0, 0, 0, 0.136);
+  transition: height 0.3s ease;
 }
 
-.project-content span:nth-child(1) {
+.projects > div > div:hover {
+  height: 50%;
+}
+
+.projects > div > div > span:nth-child(1) {
   font-size: 22px;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.943);
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
+  font-family: ocr;
+}
+
+.image-container > div:hover {
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.136);
+}
+
+.image-container > div {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  transition: backdrop-filter 0.3s ease, background 0.3s ease;
+}
+
+.projects > div > div > span:nth-child(1) {
+  font-size: 22px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.672);
+}
+
+.profile-image {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.5);
+}
+
+.projects > div > div > div {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  left: 10px;
+  right: 10px;
+}
+
+.technologies {
+  padding: 2px 16px;
+  margin: 2px;
+  border-radius: 8px;
+  background: rgba(172, 172, 172, 0.147);
+  backdrop-filter: blur(10px);
+  color: rgba(255, 255, 255, 0.554);
+}
+
+.projects > div > div > p {
+  color: rgba(255, 255, 255, 0.554);
+  display: none;
+  transition: display 0.5s ease;
+}
+
+.projects > div > div:hover > p {
+  display: block;
+}
+
+/* Estilos nuevos o modificados */
+
+.box {
+  transition: opacity 0.6s ease;
+}
+
+.container:hover > :not(:hover) {
+  opacity: 0.4;
+}
+
+/* Aplica la clase box a los elementos que quieres que tengan el efecto */
+.projects > div > div,
+.image-container > div {
+  transition: opacity 0.6s ease, height 0.3s ease;
+}
+
+.projects:hover > div > div:not(:hover),
+.image-container:hover > div:not(:hover) {
+  opacity: 0.4;
+}
+
+/* Estilos existentes */
+.projects {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: 0 auto;
+  height: 500px;
+}
+
+.projects > hr {
+  border: 2px solid rgba(255, 255, 255, 0.115);
+}
+
+.projects > div {
+  display: flex;
+  flex-direction: column;
+  width: 33.3%;
+}
+
+.projects > div > div {
+  padding: 10px 20px;
+  width: 80%;
+  height: 30%;
+  margin: 10px auto;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.073);
+  background: rgba(0, 0, 0, 0.136);
+  transition: height 0.3s ease, opacity 0.6s ease;
+}
+
+.projects > div > div:hover {
+  height: 50%;
+}
+
+.projects > div > div > span:nth-child(1) {
+  font-size: 22px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.943);
+}
+
+.image-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+  justify-content: space-around;
+  width: 80%;
+  margin: 0 auto;
+  font-family: ocr;
+}
+
+.image-container > div:hover {
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.136);
+}
+
+.image-container > div {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  transition: backdrop-filter 0.3s ease, background 0.3s ease, opacity 0.6s ease;
+}
+
+.projects > div > div > span:nth-child(1) {
+  font-size: 22px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.672);
+}
+
+.profile-image {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.5);
+}
+
+.projects > div > div > div {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  left: 10px;
+  right: 10px;
+}
+
+.technologies {
+  padding: 2px 16px;
+  margin: 2px;
+  border-radius: 8px;
+  background: rgba(172, 172, 172, 0.147);
+  backdrop-filter: blur(10px);
+  color: rgba(255, 255, 255, 0.554);
+}
+
+.projects > div > div > p {
+  color: rgba(255, 255, 255, 0.554);
+  display: none;
+  transition: display 0.5s ease;
+}
+
+.projects > div > div:hover > p {
+  display: block;
 }
