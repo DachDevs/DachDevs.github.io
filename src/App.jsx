@@ -1,5 +1,4 @@
 import './App.css'
-import CircleFollower from './components/CircleFollower'
 import Navbar from './components/Navbar'
 import { ShaderGradientCanvas, ShaderGradient } from 'shadergradient'
 import * as reactSpring from '@react-spring/three'
@@ -12,6 +11,8 @@ import Presentations from './components/Presentations'
 import SectionTitle from './components/SectionTitle'
 import Projects from './components/Projects'
 import { useState } from 'react'
+import FirstComponent from './components/FirstComponent'
+import Socials from './components/Socials'
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
       <div className='main-'>
         <Navbar />
         <div>
+          <FirstComponent />
           <Main />
           <SectionTitle title='Devs GITHUB Profiles' />
           <Presentations setImages={setImages} />
@@ -46,6 +48,7 @@ function App() {
           <Card />
           <SectionTitle title='Some GITHUB Projects' />
           <Projects images={images} />
+          <Socials images={images} />
           {/* <CircleFollower /> */}
           <footer>
             <p>&copy; 2024 Dach Devs. Todos los derechos reservados.</p>
