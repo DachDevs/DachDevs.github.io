@@ -1,0 +1,100 @@
+.first-component-container {
+  font-family: ocr;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80vh;
+  justify-content: center;
+  gap: 80px;
+}
+
+.first-component-container > div:nth-child(1) {
+  width: 620px;
+}
+
+.first-component-container > div > p {
+  color: rgba(255, 255, 255, 0.454);
+}
+
+.first-component-container > div > h1 {
+  font-size: 58px;
+  display: inline-block;
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 0.371);
+  }
+}
+
+/* icons */
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.group {
+  position: relative;
+}
+
+.button-style {
+  display: flex;
+  margin: 0 12px;
+  justify-content: center;
+  padding: 0.5rem; /* p-2 */
+  background-color: #4a556847;
+  border: none;
+  border-radius: 0.375rem; /* rounded-md */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05); /* drop-shadow-xl */
+  /* background-color: #0077b5; bg-[#0077b5] */
+  color: white; /* text-white */
+  font-weight: 600; /* font-semibold */
+  transition: all 0.5s ease-in-out; /* transition-all duration-500 */
+}
+
+.button-style:hover {
+  transform: translateY(0.75rem); /* hover:translate-y-3 */
+  border-radius: 50%; /* hover:rounded-[50%] */
+  background: linear-gradient(
+    to bottom,
+    #33102956,
+    #31041368
+  ); /* hover:from-[#331029] hover:to-[#310413] */
+}
+
+.icon-size {
+  width: 1.25rem; /* w-5 */
+  height: 1.25rem; /* h-5 */
+}
+
+.tooltip {
+  position: absolute;
+  transition: all 0.7s ease-in-out;
+  opacity: 0;
+}
+
+.group:hover .tooltip {
+  opacity: 1;
+  color: #c1c1c1; /* gray-700 */
+  font-size: 0.875rem; /* text-sm */
+  transform: translateY(-1.5rem); /* translate-y-10 */
+}

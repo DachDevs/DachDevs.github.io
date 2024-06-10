@@ -1,0 +1,31 @@
+.socials-container {
+  width: 500px;
+  height: 300px;
+  padding: 30px 40px;
+  margin: 40px auto;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.136);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials-container > div {
+  height: 30%;
+  width: 100%;
+  margin: auto;
+}
+
+.socials-container > div > hr {
+  border: 2px solid rgba(255, 255, 255, 0.108);
+  width: 100%;
+}
+
+.profile-image-contact {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.381);
+}
