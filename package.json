@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://DachDevs.github.io/",
+  "homepage": "https://DachDevs.github.io/DachDevs",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -13,13 +13,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-three/fiber": "^8.16.7",
     "@react-spring/three": "^9.1.0",
-    "shadergradient": "^1.2.14",
-    "three": "^0.165.0",
+    "@react-three/drei": "^9.106.0",
+    "@react-three/fiber": "^8.16.7",
     "framer-motion": "^11.2.10",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "shadergradient": "^1.2.14",
+    "three": "^0.165.0"
   },
   "resolutions": {
     "three": "^0.165.0"
