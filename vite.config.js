@@ -7,7 +7,20 @@ export default defineConfig({
   base: "/DachDevs/",
   build: {
     rollupOptions: {
-      external: ["@react-spring/three"],
+      external: [
+        "@react-spring/three",
+        "@react-three/drei",
+        "@react-three/fiber",
+        "three",
+      ],
+      output: {
+        globals: {
+          "@react-spring/three": "reactSpringThree",
+          "@react-three/drei": "drei",
+          "@react-three/fiber": "fiber",
+          three: "THREE",
+        },
+      },
     },
   },
 });
